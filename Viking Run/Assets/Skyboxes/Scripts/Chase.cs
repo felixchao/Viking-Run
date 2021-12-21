@@ -27,6 +27,14 @@ public class Chase : MonoBehaviour
          
          return;
       }
+      if(Vector3.Distance(Player.transform.position,transform.position) >= 9)
+      {
+         speed = 16.0f;
+      }
+      else
+      {
+         speed = 9.0f;
+      }
       transform.Translate(speed * Time.deltaTime *Vector3.forward);
   
    }
@@ -47,6 +55,7 @@ public class Chase : MonoBehaviour
             index = 0;
          }
          transform.eulerAngles = rot[index];
+         Destroy(other);
       }
 
       if (other.gameObject.tag == "right")
@@ -57,6 +66,7 @@ public class Chase : MonoBehaviour
             index = 3;
          }
          transform.eulerAngles = rot[index];
+         Destroy(other);
       }
       
    }

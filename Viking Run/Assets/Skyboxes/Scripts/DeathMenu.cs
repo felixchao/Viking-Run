@@ -7,14 +7,19 @@ using TMPro;
 
 public class DeathMenu : MonoBehaviour
 {
+   public GameObject gameaudio;
    public TextMeshProUGUI scoretext;
    public TextMeshProUGUI scoreboard;
    public Image backgroundImage;
    private bool isshowned = false;
 
    private float transition = 0.0f;
-    // Start is called before the first frame update
-    void Start()
+   private void Awake()
+   {
+      gameaudio.SetActive(false);
+   }
+   // Start is called before the first frame update
+   void Start()
     {
       gameObject.SetActive(false);
     }
