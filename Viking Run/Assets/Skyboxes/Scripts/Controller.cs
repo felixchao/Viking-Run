@@ -6,6 +6,7 @@ using TMPro;
 
 public class Controller : MonoBehaviour
 {
+   public Chase wolf;
    public Vector3 MovingDirection;
    public float JumpingForce;
    public float Gravity = -20f;
@@ -36,11 +37,12 @@ public class Controller : MonoBehaviour
    void Update()
     {
 
-      if(transform.position.y <= -5)
+      if(transform.position.y <= -5||wolf.isdead)
       {
-         
+         animator.SetBool("Die", true);
          return;
       }
+
       run = false;
 
    

@@ -11,6 +11,7 @@ public class Chase : MonoBehaviour
    public Vector3[] rotation;
    public Vector3[] rot;
    public bool isrepeat = false;
+   public bool isdead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +22,24 @@ public class Chase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (isdead)
+      {
+         
+         return;
+      }
       transform.Translate(speed * Time.deltaTime *Vector3.forward);
   
    }
 
    private void OnTriggerEnter(Collider other)
    {
-
+      if(other.gameObject.tag == "Player")
+      {
+         isdead = true;
+      }
       if (other.gameObject.tag == "left" )
       {
-         Debug.Log("left");
+
          index++;
          if(index == 4)
          {
@@ -41,7 +50,6 @@ public class Chase : MonoBehaviour
 
       if (other.gameObject.tag == "right")
       {
-         Debug.Log("right");
          index--;
          if(index == -1)
          {

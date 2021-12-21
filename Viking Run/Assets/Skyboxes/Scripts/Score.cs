@@ -5,6 +5,7 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+   public Chase wolf;
    public DeathMenu deathMenu;
    public TextMeshProUGUI text;
    public TextMeshProUGUI scoretext;
@@ -22,7 +23,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (player.position.y <= -5)
+      if (player.position.y <= -5||wolf.isdead)
       {
          deathMenu.ToggleEndMenu(time,score);
          return;

@@ -852,6 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004292d35b806bd48b39b307273ba788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wolf: {fileID: 1878841835}
   deathMenu: {fileID: 346580200}
   text: {fileID: 1032459329}
   scoretext: {fileID: 1106557903}
@@ -2980,6 +2981,7 @@ MonoBehaviour:
   rotation: []
   rot: []
   isrepeat: 0
+  isdead: 0
 --- !u!65 &1878841836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3494,6 +3496,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1077750263668116503, guid: ea71450280e5ea24fab6947f4dfc2d3d, type: 3}
+      propertyPath: wolf
+      value: 
+      objectReference: {fileID: 1878841835}
     - target: {fileID: 1077750263668116503, guid: ea71450280e5ea24fab6947f4dfc2d3d, type: 3}
       propertyPath: score
       value: 
