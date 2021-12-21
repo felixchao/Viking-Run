@@ -2503,6 +2503,8 @@ MonoBehaviour:
   countleft: 0
   countright: 0
   rock: {fileID: 1000010500592550, guid: 7ca6266755abbbe4b8d3f5619d889395, type: 3}
+  cubeleft: {fileID: 1521812792748151544, guid: 36b504b75ee082e48b9e9c31b37939c7, type: 3}
+  cuberight: {fileID: 8624308046389832609, guid: 908883f1401e6c146875c11efc47c043, type: 3}
 --- !u!4 &1617011802
 Transform:
   m_ObjectHideFlags: 0
@@ -2977,7 +2979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 582325611}
-  speed: 9
+  speed: 9.5
   rotation: []
   rot: []
   isrepeat: 0
@@ -2993,8 +2995,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3289035, y: 0.36833906, z: 0.010211054}
-  m_Center: {x: 0.016242858, y: 0.59191996, z: 0.7063796}
+  m_Size: {x: 0.38797778, y: 0.36833906, z: 0.6747368}
+  m_Center: {x: 0.0038670546, y: 0.59191996, z: -0.07896517}
 --- !u!54 &1878841839
 Rigidbody:
   m_ObjectHideFlags: 0

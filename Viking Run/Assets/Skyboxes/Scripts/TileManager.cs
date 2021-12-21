@@ -25,6 +25,8 @@ public class TileManager : MonoBehaviour
    public int countright = 0;
    private int index = 0;
    public GameObject rock;
+   public GameObject cubeleft;
+   public GameObject cuberight;
    private List<GameObject> activeTiles;
     void Start()
     {
@@ -59,10 +61,11 @@ public class TileManager : MonoBehaviour
    private void SpawnTile(int prefabIndex = -1)
    {
       GameObject go;
-
+      int rd1 = 0;
       if (prefabIndex == -1)
       {
          int rd = RandomPrefabIndex();
+         rd1 = rd;
          go = Instantiate(tilePrefabs[rd]) as GameObject;
          if (rd == 0)
          {
@@ -98,6 +101,16 @@ public class TileManager : MonoBehaviour
       go.transform.Rotate(0f,rot[index], 0f);
       activeTiles.Add(go);
 
+      if(rd1 == 1)
+      {
+         GameObject wall = Instantiate(cubeleft, go.transform.position , cubeleft.transform.rotation);
+         wall.transform.Rotate(0f, rot[index], 0f);
+      }
+      else if(rd1 == 3)
+      {
+         GameObject wall = Instantiate(cuberight, go.transform.position , cuberight.transform.rotation);
+         wall.transform.Rotate(0f, rot[index], 0f);
+      }
 
       if (isleft)
       {
