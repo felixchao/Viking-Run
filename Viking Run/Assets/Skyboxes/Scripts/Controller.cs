@@ -83,7 +83,7 @@ public class Controller : MonoBehaviour
       animator.SetBool("Run", run);
 
       
-         if (Input.GetKey(KeyCode.Space)&&onGround == 1)
+         if (Input.GetKeyDown(KeyCode.Space)&&onGround == 1)
          {
           
            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
